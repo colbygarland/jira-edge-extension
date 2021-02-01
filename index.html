@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Open JIRA Ticket</title>
+    <style>
+      #container {
+        width: 250px;
+      }
+      h5 {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+      small {
+        font-size: 10px;
+        margin-bottom: 8px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+      button {
+        background-color: rgb(0, 82, 204);
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        text-align: center;
+        font-size: 13px;
+        margin-top: 10px;
+        border-radius: 3px;
+        font-weight: bold;
+      }
+      input {
+        width: 100%;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="permissions">
+        <button id="givePerm">Give Storage Permissions</button>
+      </div>
+      <div id="settings" class="hidden">
+        <h5>Enter JIRA URL</h5>
+        <label>JIRA URL</label>
+        <input
+          type="url"
+          id="url"
+          placeholder="https://company.atlassian.net/browse/"
+        />
+        <button id="store">Save URL</button>
+      </div>
+
+      <div id="ticketInfo" class="hidden">
+        <h5>Enter JIRA Ticket Number</h5>
+        <small
+          >Example:
+          <code>2408</code>
+        </small>
+        <div>
+          <label>Ticket Number</label>
+          <input
+            type="number"
+            min="1"
+            max="9999"
+            id="ticket"
+            placeholder="1234"
+          />
+        </div>
+        <div>
+          <button id="open" disabled>Open</button>
+        </div>
+      </div>
+    </div>
+    <script src="jira.js"></script>
+  </body>
+</html>

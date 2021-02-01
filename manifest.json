@@ -1,0 +1,16 @@
+{
+  "name": "Open JIRA Ticket",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "description": "A Chromium extension to open a new tab with a Jira ticket.",
+  "icons": {
+    "16": "icons/jira.png",
+    "32": "icons/jira.png",
+    "48": "icons/jira.png",
+    "128": "icons/jira.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["storage"]
+}
